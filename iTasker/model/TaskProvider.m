@@ -144,4 +144,29 @@
     return nil;
 }
 
+- (void)updateArrays{
+    for(TaskInfo *info in _taskInfosPriorityOne){
+        if(info.task.priority != 0){
+            [self moveTaskInfoFromArrayToArray:info :_taskInfosPriorityOne :[self getTaskInfosWithPriority:info.task.priority]];
+        }
+    }
+    for(TaskInfo *info in _taskInfosPriorityTwo){
+        if(info.task.priority != 0){
+            [self moveTaskInfoFromArrayToArray:info :_taskInfosPriorityTwo :[self getTaskInfosWithPriority:info.task.priority]];
+        }
+    }
+    for(TaskInfo *info in _taskinfosPriorityZero){
+        if(info.task.priority != 0){
+            [self moveTaskInfoFromArrayToArray:info :_taskinfosPriorityZero :[self getTaskInfosWithPriority:info.task.priority]];
+        }
+    }
+}
+
+- (void)moveTaskInfoFromArrayToArray:(TaskInfo *) taskInfo :(NSMutableArray *)sourceArray : (NSMutableArray *) destinationArray{
+    NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
+    
+    [destinationArray addObject:[taskInfo copy]];
+    [sourceArray removeObject:taskInfo];
+}
+
 @end

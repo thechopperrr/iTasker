@@ -47,6 +47,7 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 -(void)viewDidAppear:(BOOL)animated{
     [self clearSelectedTasks];
+    [_tableView reloadData];
 }
 //isEditable !!!!
 - (void)setUpTexts{
@@ -140,6 +141,7 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 - (void)clearSelectedTasks{
     [_taskProvider deselectAllTasks];
     [_tableView reloadData];
+    //[_taskProvider updateArrays];
 }
 
 @end

@@ -26,5 +26,6 @@
 - (NSMutableArray*)getTaskInfosWithPriority:(int)priority;
 - (int)getHoursForPriority:(int)priority;
 - (void)saveTask:(Task *)task;
+- (void)updateArrays;
 
 @end

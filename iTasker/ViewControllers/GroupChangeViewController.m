@@ -72,15 +72,6 @@
     [[self view] endEditing: YES];
 }
 
-//- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result {
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-//    _notesTextView.text = result;
-//}
-//
-//- (void)readerDidCancel:(QRCodeReaderViewController *)reader {
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-//}
-
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
     return 1;
 }
