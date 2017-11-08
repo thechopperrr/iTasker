@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		550772021FADABC40019B64B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772011FADABC40019B64B /* AppDelegate.m */; };
-		550772051FADABC40019B64B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772041FADABC40019B64B /* ViewController.m */; };
+		550772051FADABC40019B64B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772041FADABC40019B64B /* HomeViewController.m */; };
 		550772081FADABC40019B64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550772061FADABC40019B64B /* Main.storyboard */; };
 		5507720A1FADABC40019B64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550772091FADABC40019B64B /* Assets.xcassets */; };
 		5507720D1FADABC40019B64B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5507720B1FADABC40019B64B /* LaunchScreen.storyboard */; };
 		550772101FADABC40019B64B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507720F1FADABC40019B64B /* main.m */; };
 		5507721A1FADABC40019B64B /* iTaskerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772191FADABC40019B64B /* iTaskerTests.m */; };
 		550772251FADABC40019B64B /* iTaskerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772241FADABC40019B64B /* iTaskerUITests.m */; };
+		550772351FADADBC0019B64B /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772341FADADBC0019B64B /* Task.m */; };
+		5507723A1FADB2780019B64B /* to_do_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 550772391FADB2770019B64B /* to_do_list.json */; };
+		5507723C1FADE7AD0019B64B /* TaskLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507723B1FADE7AD0019B64B /* TaskLoader.m */; };
+		5507723F1FADE7CF0019B64B /* TaskProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507723E1FADE7CF0019B64B /* TaskProvider.m */; };
+		550772431FADEDFE0019B64B /* TaskViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772411FADEDFE0019B64B /* TaskViewCell.m */; };
+		550772441FADEDFE0019B64B /* TaskViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550772421FADEDFE0019B64B /* TaskViewCell.xib */; };
+		550772471FAE00D00019B64B /* UpdateTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772461FAE00D00019B64B /* UpdateTaskViewController.m */; };
+		5507724A1FAF4D700019B64B /* GroupChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550772491FAF4D700019B64B /* GroupChangeViewController.m */; };
+		550772641FAF57AA0019B64B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 550772631FAF57AA0019B64B /* Localizable.strings */; };
+		557566A91FB238C800D35CD9 /* TaskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 557566A81FB238C800D35CD9 /* TaskInfo.m */; };
+		557566AD1FB371CB00D35CD9 /* BarCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557566AC1FB371CB00D35CD9 /* BarCodeReaderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +49,8 @@
 		550771FD1FADABC40019B64B /* iTasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550772001FADABC40019B64B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		550772011FADABC40019B64B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		550772031FADABC40019B64B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		550772041FADABC40019B64B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		550772031FADABC40019B64B /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		550772041FADABC40019B64B /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		550772071FADABC40019B64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		550772091FADABC40019B64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5507720C1FADABC40019B64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +62,25 @@
 		550772201FADABC40019B64B /* iTaskerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTaskerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		550772241FADABC40019B64B /* iTaskerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTaskerUITests.m; sourceTree = "<group>"; };
 		550772261FADABC40019B64B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		550772331FADADBC0019B64B /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		550772341FADADBC0019B64B /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		550772361FADAFF60019B64B /* TaskLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskLoader.h; sourceTree = "<group>"; };
+		550772391FADB2770019B64B /* to_do_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = to_do_list.json; sourceTree = "<group>"; };
+		5507723B1FADE7AD0019B64B /* TaskLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLoader.m; sourceTree = "<group>"; };
+		5507723D1FADE7CF0019B64B /* TaskProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskProvider.h; sourceTree = "<group>"; };
+		5507723E1FADE7CF0019B64B /* TaskProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskProvider.m; sourceTree = "<group>"; };
+		550772401FADEDFE0019B64B /* TaskViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskViewCell.h; sourceTree = "<group>"; };
+		550772411FADEDFE0019B64B /* TaskViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskViewCell.m; sourceTree = "<group>"; };
+		550772421FADEDFE0019B64B /* TaskViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskViewCell.xib; sourceTree = "<group>"; };
+		550772451FAE00D00019B64B /* UpdateTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateTaskViewController.h; sourceTree = "<group>"; };
+		550772461FAE00D00019B64B /* UpdateTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateTaskViewController.m; sourceTree = "<group>"; };
+		550772481FAF4D700019B64B /* GroupChangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChangeViewController.h; sourceTree = "<group>"; };
+		550772491FAF4D700019B64B /* GroupChangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChangeViewController.m; sourceTree = "<group>"; };
+		550772631FAF57AA0019B64B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		557566A71FB238C800D35CD9 /* TaskInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskInfo.h; sourceTree = "<group>"; };
+		557566A81FB238C800D35CD9 /* TaskInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskInfo.m; sourceTree = "<group>"; };
+		557566AB1FB371CB00D35CD9 /* BarCodeReaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarCodeReaderViewController.h; sourceTree = "<group>"; };
+		557566AC1FB371CB00D35CD9 /* BarCodeReaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarCodeReaderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +131,25 @@
 		550771FF1FADABC40019B64B /* iTasker */ = {
 			isa = PBXGroup;
 			children = (
+				550772321FADAD9C0019B64B /* model */,
 				550772001FADABC40019B64B /* AppDelegate.h */,
 				550772011FADABC40019B64B /* AppDelegate.m */,
-				550772031FADABC40019B64B /* ViewController.h */,
-				550772041FADABC40019B64B /* ViewController.m */,
+				550772451FAE00D00019B64B /* UpdateTaskViewController.h */,
+				550772461FAE00D00019B64B /* UpdateTaskViewController.m */,
+				550772031FADABC40019B64B /* HomeViewController.h */,
+				550772041FADABC40019B64B /* HomeViewController.m */,
+				550772481FAF4D700019B64B /* GroupChangeViewController.h */,
+				550772491FAF4D700019B64B /* GroupChangeViewController.m */,
+				550772401FADEDFE0019B64B /* TaskViewCell.h */,
+				550772411FADEDFE0019B64B /* TaskViewCell.m */,
+				550772421FADEDFE0019B64B /* TaskViewCell.xib */,
+				550772631FAF57AA0019B64B /* Localizable.strings */,
 				550772061FADABC40019B64B /* Main.storyboard */,
+				557566AA1FB370AF00D35CD9 /* BarCodeScanner */,
 				550772091FADABC40019B64B /* Assets.xcassets */,
 				5507720B1FADABC40019B64B /* LaunchScreen.storyboard */,
 				5507720E1FADABC40019B64B /* Info.plist */,
+				550772391FADB2770019B64B /* to_do_list.json */,
 				5507720F1FADABC40019B64B /* main.m */,
 			);
 			path = iTasker;
@@ -130,6 +171,30 @@
 				550772261FADABC40019B64B /* Info.plist */,
 			);
 			path = iTaskerUITests;
+			sourceTree = "<group>";
+		};
+		550772321FADAD9C0019B64B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				550772331FADADBC0019B64B /* Task.h */,
+				550772341FADADBC0019B64B /* Task.m */,
+				557566A71FB238C800D35CD9 /* TaskInfo.h */,
+				557566A81FB238C800D35CD9 /* TaskInfo.m */,
+				550772361FADAFF60019B64B /* TaskLoader.h */,
+				5507723B1FADE7AD0019B64B /* TaskLoader.m */,
+				5507723D1FADE7CF0019B64B /* TaskProvider.h */,
+				5507723E1FADE7CF0019B64B /* TaskProvider.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		557566AA1FB370AF00D35CD9 /* BarCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				557566AB1FB371CB00D35CD9 /* BarCodeReaderViewController.h */,
+				557566AC1FB371CB00D35CD9 /* BarCodeReaderViewController.m */,
+			);
+			path = BarCodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +303,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550772441FADEDFE0019B64B /* TaskViewCell.xib in Resources */,
 				5507720D1FADABC40019B64B /* LaunchScreen.storyboard in Resources */,
 				5507720A1FADABC40019B64B /* Assets.xcassets in Resources */,
+				550772641FAF57AA0019B64B /* Localizable.strings in Resources */,
 				550772081FADABC40019B64B /* Main.storyboard in Resources */,
+				5507723A1FADB2780019B64B /* to_do_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +333,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				550772051FADABC40019B64B /* ViewController.m in Sources */,
+				550772351FADADBC0019B64B /* Task.m in Sources */,
+				550772051FADABC40019B64B /* HomeViewController.m in Sources */,
+				5507724A1FAF4D700019B64B /* GroupChangeViewController.m in Sources */,
+				550772471FAE00D00019B64B /* UpdateTaskViewController.m in Sources */,
+				5507723C1FADE7AD0019B64B /* TaskLoader.m in Sources */,
+				557566AD1FB371CB00D35CD9 /* BarCodeReaderViewController.m in Sources */,
 				550772101FADABC40019B64B /* main.m in Sources */,
+				550772431FADEDFE0019B64B /* TaskViewCell.m in Sources */,
+				557566A91FB238C800D35CD9 /* TaskInfo.m in Sources */,
 				550772021FADABC40019B64B /* AppDelegate.m in Sources */,
+				5507723F1FADE7CF0019B64B /* TaskProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,13 +506,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RPA568A5Y2;
 				INFOPLIST_FILE = iTasker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.n.iTasker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,13 +522,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RPA568A5Y2;
 				INFOPLIST_FILE = iTasker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.n.iTasker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

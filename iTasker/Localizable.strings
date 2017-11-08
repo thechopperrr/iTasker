@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  iTasker
+
+  Created by andrey on 11/5/17.
+  Copyright © 2017 andrey. All rights reserved.
+*/
+"btn_group_change" = "Group change";
+"btn_add_task" = "Add";
+"lbl_hours" = "hours";
+"lbl_cell_hours" = "Hours: %.02f";
+"lbl_task_dsc" = "Task description";
+"lbl_task_notes" = "Task notes";
+"btn_qr_scan" = "QR scan notes";
+"lbl_editable" = "Editable";
+"lbl_priority" = "Priority";
+"btn_cancell" = "Cancell";
+"btn_save" = "Save";
+"lbl_wrn_grp_change" = "In group change you can only modify priority and notes of task";
+"title_group_change" = "Group change";
+"title_new_task" = "New task";
+"title_task" = "Task";
+"title_app" = "iTasker";
+"btn_ok" = "OK";
+"title_error" = "Error";
+"hrs_error_messahe" = "Please type number for hours";
+"task_header" = "Priority: %d and hours: %@";
+"title_wrn" = "Warning";
+"not_editable_messahe" = "Task is not editable";
+
