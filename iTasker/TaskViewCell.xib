@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlR-NO-bcX">
-                        <rect key="frame" x="8" y="4" width="249" height="21"/>
+                        <rect key="frame" x="8" y="4" width="86" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Uls-Eb-N3b"/>
                         </constraints>
@@ -29,16 +29,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="557-DB-1WO">
-                        <rect key="frame" x="8" y="30" width="249" height="29"/>
+                        <rect key="frame" x="8" y="30" width="86" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btW-VT-3FF">
-                        <rect key="frame" x="282" y="18" width="30" height="30"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="252" y="0.0" width="68" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="YCT-Ov-1JJ"/>
+                            <constraint firstAttribute="width" constant="68" id="47E-G2-lQW"/>
                         </constraints>
                         <connections>
                             <action selector="selectButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6M1-Bl-RMM"/>
@@ -46,15 +46,15 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="btW-VT-3FF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4QO-bi-Bqa"/>
                     <constraint firstItem="nlR-NO-bcX" firstAttribute="trailing" secondItem="557-DB-1WO" secondAttribute="trailing" id="JH3-Dd-htL"/>
                     <constraint firstAttribute="bottomMargin" secondItem="557-DB-1WO" secondAttribute="bottom" constant="0.5" id="JKH-YG-mbf"/>
-                    <constraint firstItem="btW-VT-3FF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LIg-5W-KB0"/>
+                    <constraint firstItem="btW-VT-3FF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M9V-sp-56S"/>
                     <constraint firstItem="nlR-NO-bcX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="MJb-TV-iMd"/>
                     <constraint firstItem="557-DB-1WO" firstAttribute="top" secondItem="nlR-NO-bcX" secondAttribute="bottom" constant="5" id="fnl-zT-Z6s"/>
                     <constraint firstItem="nlR-NO-bcX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hpr-En-rdP"/>
-                    <constraint firstAttribute="trailing" secondItem="btW-VT-3FF" secondAttribute="trailing" constant="8" id="jWc-ji-g0n"/>
+                    <constraint firstAttribute="trailing" secondItem="btW-VT-3FF" secondAttribute="trailing" id="lWw-dX-cDx"/>
                     <constraint firstItem="557-DB-1WO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="p1y-Xk-aVm"/>
-                    <constraint firstItem="btW-VT-3FF" firstAttribute="leading" secondItem="nlR-NO-bcX" secondAttribute="trailing" constant="25" id="qXf-js-yXP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

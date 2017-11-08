@@ -162,13 +162,15 @@
     [_taskNotesTextView setText:text];
 }
 
-//- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result {
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-//    [_taskNotesTextView setText:result];
-//}
-//
-//- (void)readerDidCancel:(QRCodeReaderViewController *)reader {
-//    [self dismissViewControllerAnimated:YES completion:NULL];
-//}
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (textView == _taskNotesTextView || textView == _taskDeskTextView){
+        if ([text isEqualToString:@"\n"]) {
+            [textView resignFirstResponder];
+            return NO;
+        }
+    }
+    return YES;
+}
 
 @end

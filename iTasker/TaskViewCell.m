@@ -17,8 +17,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _selectButton.layer.masksToBounds = true;
-    _selectButton.layer.cornerRadius = _selectButton.frame.size.width/2;
+    _selectButton.layer.borderWidth = 2.0f;
+    _selectButton.layer.borderColor = [UIColor cyanColor].CGColor;
 }
 
 //- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -40,7 +40,7 @@
     if(  _taskInfo.isSelected)
         _selectButton.backgroundColor = [UIColor cyanColor];
     else
-        _selectButton.backgroundColor = [UIColor lightGrayColor];
+        _selectButton.backgroundColor = [UIColor whiteColor];
     _timeLabel.text =  [NSString stringWithFormat:NSLocalizedString(@"lbl_cell_hours", nil) ,_taskInfo.task.hours];
     _deskriptionLabel.text = _taskInfo.task.taskDescription;
 }
@@ -51,7 +51,7 @@
 }
 
 - (void)deselecttCell{
-    _selectButton.backgroundColor = [UIColor lightGrayColor];
+    _selectButton.backgroundColor = [UIColor whiteColor];
     _taskInfo.isSelected = NO;
 }
 

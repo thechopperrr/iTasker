@@ -101,6 +101,8 @@
 
 - (BOOL)areAllSelectedWithSamePriority{
     NSArray* tasks = [self getSelectedTasks];
+    TaskInfo* taskInfo = [tasks firstObject];
+    _selectedPriority = taskInfo.task.priority;
     for (TaskInfo *info in tasks){
         if(info.task.priority != _selectedPriority)
             return NO;

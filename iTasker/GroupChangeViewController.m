@@ -9,7 +9,7 @@
 #import "GroupChangeViewController.h"
 #import "TaskInfo.h"
 
-@interface GroupChangeViewController ()
+@interface GroupChangeViewController ()<UITextViewDelegate>
 
 @end
 
@@ -25,6 +25,10 @@
     [_qrScanButton setTitle:NSLocalizedString(@"btn_qr_scan", nil) forState:UIControlStateNormal];
     [_cancellButton setTitle:NSLocalizedString(@"btn_cancell", nil) forState:UIControlStateNormal];
     [_saveButton setTitle:NSLocalizedString(@"btn_save", nil) forState:UIControlStateNormal];
+    
+    UITapGestureRecognizer *tapRec = [[UITapGestureRecognizer alloc]
+                                      initWithTarget:self action:@selector(tap:)];
+    [self.view addGestureRecognizer: tapRec];
     
     [self setUptexts];
     // Do any additional setup after loading the view.
@@ -64,6 +68,9 @@
      _notesTextView.text = text;
 }
 
+-(void)tap:(UITapGestureRecognizer *)tapRec{
+    [[self view] endEditing: YES];
+}
 
 //- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result {
 //    [self dismissViewControllerAnimated:YES completion:NULL];
@@ -89,5 +96,17 @@
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
 }
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (textView == _notesTextView){
+        if ([text isEqualToString:@"\n"]) {
+            [textView resignFirstResponder];
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 @end

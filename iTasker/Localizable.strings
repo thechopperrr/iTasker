@@ -11,10 +11,10 @@
 "lbl_cell_hours" = "Hours: %.02f";
 "lbl_task_dsc" = "Task description";
 "lbl_task_notes" = "Task notes";
-"btn_qr_scan" = "QR scan notes";
+"btn_qr_scan" = "Barcode scan notes";
 "lbl_editable" = "Editable";
 "lbl_priority" = "Priority";
-"btn_cancell" = "Cancell";
+"btn_cancell" = "Cancel";
 "btn_save" = "Save";
 "lbl_wrn_grp_change" = "In group change you can only modify priority and notes of task";
 "title_group_change" = "Group change";
