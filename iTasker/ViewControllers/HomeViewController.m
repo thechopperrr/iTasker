@@ -98,19 +98,19 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TaskViewCell *selectedCell=[tableView cellForRowAtIndexPath:indexPath];
-    [self openUpdateVCWithTask: [selectedCell.taskInfo.task copy]];
+    [self openUpdateVCWithTask: selectedCell.taskInfo];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(void)saveTask:(Task *)task {
-    [_taskProvider saveTask:task];
+-(void)saveTask:(TaskInfo *)taskInfo {
+    [_taskProvider saveTask:taskInfo];
     [_tableView reloadData];
 }
 
-- (void)openUpdateVCWithTask:(Task *)task{
+- (void)openUpdateVCWithTask:(TaskInfo *)taskInfo{
     UpdateTaskViewController *updateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UpdateTaskViewController"];
     updateViewController.delegate = self;
-    updateViewController.task = task;		
+    updateViewController.taskInfo = taskInfo;
     [self.navigationController pushViewController:updateViewController animated:NO];
 }
 
@@ -141,7 +141,7 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 - (void)clearSelectedTasks{
     [_taskProvider deselectAllTasks];
     [_tableView reloadData];
-    //[_taskProvider updateArrays];
+    [_taskProvider updateArrays];
 }
 
 @end

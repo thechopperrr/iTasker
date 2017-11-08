@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Task.h"
+#import "TaskInfo.h"
 #import "HomeViewController.h"
 #import "BarCodeReaderViewController.h"
 
 @protocol UpdateTaskViewControllerDelegate<NSObject>
-- (void)saveTask:(Task *)task;
+- (void)saveTask:(TaskInfo *)taskInfo;
 @end
 
 @interface UpdateTaskViewController : UIViewController <UIPickerViewDelegate, BarCodeReaderDelegate>
 
-@property Task* task;
+@property TaskInfo* taskInfo;
 @property (weak, nonatomic) IBOutlet UILabel *taskDescLabel;
 @property (weak, nonatomic) IBOutlet UITextView *taskDeskTextView;
 @property (weak, nonatomic) IBOutlet UILabel *taskNotesLabel;

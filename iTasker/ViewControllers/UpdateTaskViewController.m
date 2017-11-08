@@ -20,8 +20,8 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     [self setUpTexts];
-    if(_task){
-        [self updateViewsForTask:_task];
+    if(_taskInfo.task){
+        [self updateViewsForTask:_taskInfo.task];
         self.navigationItem.title = NSLocalizedString(@"title_task", nil);
     } else {
         self.navigationItem.title = NSLocalizedString(@"title_new_task", nil);
@@ -56,7 +56,7 @@
 
 - (BOOL)saveOneTask{
     if ([self saveTask]){
-        [_delegate saveTask:_task];
+        [_delegate saveTask:_taskInfo];
         return YES;
     } else {
         return NO;
@@ -99,23 +99,24 @@
 
 - (BOOL)saveTask {
     //if we create new task
-    if( ! _task){
-        _task = [[Task alloc]init];
+    if( ! _taskInfo){
+        _taskInfo = [[TaskInfo alloc]init];
+        _taskInfo.task = [[Task alloc]init];
     }
     if([_editableSwitch isOn]){
-        _task.isEditable = YES;
+        _taskInfo.task.isEditable = YES;
     } else {
-        _task.isEditable = NO;
+        _taskInfo.task.isEditable = NO;
     }
-    _task.priority = (int)[_priorityPickerView selectedRowInComponent:0];
-    _task.taskDescription =  _taskDeskTextView.text;
-    _task.notes = _taskNotesTextView.text;
+    _taskInfo.task.priority = (int)[_priorityPickerView selectedRowInComponent:0];
+    _taskInfo.task.taskDescription =  _taskDeskTextView.text;
+   _taskInfo.task.notes = _taskNotesTextView.text;
     NSDecimal decimalValue;
     NSScanner *sc = [NSScanner scannerWithString:_hoursTextField.text];
     [sc scanDecimal:&decimalValue];
     BOOL isDecimal = [sc isAtEnd];
     if(isDecimal){
-        _task.hours = [_hoursTextField.text doubleValue];
+        _taskInfo.task.hours = [_hoursTextField.text doubleValue];
         return YES;
     } else {
         UIAlertController * alert=[UIAlertController alertControllerWithTitle:NSLocalizedString(@"title_error", nil)

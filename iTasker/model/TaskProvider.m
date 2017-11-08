@@ -63,14 +63,19 @@
     return hours;
 }
 
-- (void)saveTask:(Task *)taskToUpdate{
-    
-    NSMutableArray* taskArray = [self getTaskInfosWithPriority:taskToUpdate.priority];
-    TaskInfo* info = [[TaskInfo alloc]init];
-    info.task = taskToUpdate;
-    [taskArray addObject:info];
+- (void)saveTask:(TaskInfo *)taskToUpdate{
+    NSMutableArray* taskArray = [self getTaskInfosWithPriority:taskToUpdate.task.priority];
+    if( ! [self containsObjectWithId:taskToUpdate.task.taskId :taskArray])
+        [taskArray addObject:taskToUpdate];
 }
 
+- (BOOL)containsObjectWithId:(int)taskId : (NSMutableArray *)tasks{
+    for(TaskInfo *info in tasks){
+        if(info.task.taskId == taskId)
+            return YES;
+    }
+    return NO;
+}
 - (void)deselectTaskInArray: (NSMutableArray*)tasks{
     for(TaskInfo* info in tasks)
         info.isSelected = NO;
@@ -145,28 +150,22 @@
 }
 
 - (void)updateArrays{
-    for(TaskInfo *info in _taskInfosPriorityOne){
-        if(info.task.priority != 0){
-            [self moveTaskInfoFromArrayToArray:info :_taskInfosPriorityOne :[self getTaskInfosWithPriority:info.task.priority]];
-        }
-    }
-    for(TaskInfo *info in _taskInfosPriorityTwo){
-        if(info.task.priority != 0){
-            [self moveTaskInfoFromArrayToArray:info :_taskInfosPriorityTwo :[self getTaskInfosWithPriority:info.task.priority]];
-        }
-    }
-    for(TaskInfo *info in _taskinfosPriorityZero){
-        if(info.task.priority != 0){
-            [self moveTaskInfoFromArrayToArray:info :_taskinfosPriorityZero :[self getTaskInfosWithPriority:info.task.priority]];
-        }
-    }
+    [self relocateTasksFromArray:_taskinfosPriorityZero withPriority:0];
+    [self relocateTasksFromArray:_taskInfosPriorityOne	 withPriority:1];
+    [self relocateTasksFromArray:_taskInfosPriorityTwo withPriority:2];
 }
 
-- (void)moveTaskInfoFromArrayToArray:(TaskInfo *) taskInfo :(NSMutableArray *)sourceArray : (NSMutableArray *) destinationArray{
-    NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
-    
-    [destinationArray addObject:[taskInfo copy]];
-    [sourceArray removeObject:taskInfo];
+
+- (void)relocateTasksFromArray:(NSMutableArray *)array withPriority: (int)priority{
+    NSMutableArray *tasksToDelete = [[NSMutableArray alloc]init];
+    for(TaskInfo *info in array){
+        if(info.task.priority != priority){
+            NSMutableArray *arrayToUpdate = [self getTaskInfosWithPriority:info.task.priority];
+            [arrayToUpdate addObject:[info copy]];
+            [tasksToDelete addObject:info];
+        }
+    }
+    [array removeObjectsInArray:tasksToDelete];
 }
 
 @end

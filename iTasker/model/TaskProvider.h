@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Task.h"
+#import "TaskInfo.h"
 
 @interface TaskProvider : NSObject
 
@@ -25,7 +25,7 @@
 - (NSMutableArray *)getTasksForGroupChange;
 - (NSMutableArray*)getTaskInfosWithPriority:(int)priority;
 - (int)getHoursForPriority:(int)priority;
-- (void)saveTask:(Task *)task;
+- (void)saveTask:(TaskInfo *)task;
 - (void)updateArrays;
 
 @end

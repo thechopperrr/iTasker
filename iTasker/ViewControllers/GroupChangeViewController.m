@@ -29,7 +29,8 @@
     UITapGestureRecognizer *tapRec = [[UITapGestureRecognizer alloc]
                                       initWithTarget:self action:@selector(tap:)];
     [self.view addGestureRecognizer: tapRec];
-    
+    TaskInfo *info = [_selectedTasks firstObject];
+     [_pickerView selectRow:info.task.priority inComponent:0 animated:YES];
     [self setUptexts];
     // Do any additional setup after loading the view.
 }
