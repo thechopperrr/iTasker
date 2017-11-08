@@ -115,7 +115,8 @@
         return NO;
     
     NSArray *selectedTasks =  [self getSelectedTasks];
-    int selectedPriority = [[selectedTasks firstObject] task].priority;
+    TaskInfo* info = [selectedTasks firstObject];
+    int selectedPriority =  info.task.priority;
     NSMutableArray *tasksWithPriority = [self getTaskInfosWithPriority:selectedPriority];
     int selectedCount = (int)[selectedTasks count] ;
     
@@ -130,8 +131,7 @@
                     TaskInfo *nextInfo = [tasksWithPriority objectAtIndex:i+1];
                     if( ! nextInfo.isSelected)
                         return NO;
-                }
-                
+                } 
             }
         }
     }

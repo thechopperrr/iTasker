@@ -133,23 +133,14 @@
 			children = (
 				550772321FADAD9C0019B64B /* model */,
 				550772001FADABC40019B64B /* AppDelegate.h */,
+				55734BAF1FB3B334008E67F5 /* ViewControllers */,
 				550772011FADABC40019B64B /* AppDelegate.m */,
-				550772451FAE00D00019B64B /* UpdateTaskViewController.h */,
-				550772461FAE00D00019B64B /* UpdateTaskViewController.m */,
-				550772031FADABC40019B64B /* HomeViewController.h */,
-				550772041FADABC40019B64B /* HomeViewController.m */,
-				550772481FAF4D700019B64B /* GroupChangeViewController.h */,
-				550772491FAF4D700019B64B /* GroupChangeViewController.m */,
-				550772401FADEDFE0019B64B /* TaskViewCell.h */,
-				550772411FADEDFE0019B64B /* TaskViewCell.m */,
-				550772421FADEDFE0019B64B /* TaskViewCell.xib */,
-				550772631FAF57AA0019B64B /* Localizable.strings */,
+				55734BB01FB3B361008E67F5 /* Views */,
 				550772061FADABC40019B64B /* Main.storyboard */,
-				557566AA1FB370AF00D35CD9 /* BarCodeScanner */,
 				550772091FADABC40019B64B /* Assets.xcassets */,
+				55734BAD1FB3B2B1008E67F5 /* sources */,
 				5507720B1FADABC40019B64B /* LaunchScreen.storyboard */,
 				5507720E1FADABC40019B64B /* Info.plist */,
-				550772391FADB2770019B64B /* to_do_list.json */,
 				5507720F1FADABC40019B64B /* main.m */,
 			);
 			path = iTasker;
@@ -188,13 +179,38 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		557566AA1FB370AF00D35CD9 /* BarCodeScanner */ = {
+		55734BAD1FB3B2B1008E67F5 /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				550772631FAF57AA0019B64B /* Localizable.strings */,
+				550772391FADB2770019B64B /* to_do_list.json */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		55734BAF1FB3B334008E67F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				550772451FAE00D00019B64B /* UpdateTaskViewController.h */,
+				550772461FAE00D00019B64B /* UpdateTaskViewController.m */,
+				550772031FADABC40019B64B /* HomeViewController.h */,
+				550772041FADABC40019B64B /* HomeViewController.m */,
+				550772481FAF4D700019B64B /* GroupChangeViewController.h */,
+				550772491FAF4D700019B64B /* GroupChangeViewController.m */,
 				557566AB1FB371CB00D35CD9 /* BarCodeReaderViewController.h */,
 				557566AC1FB371CB00D35CD9 /* BarCodeReaderViewController.m */,
 			);
-			path = BarCodeScanner;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		55734BB01FB3B361008E67F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				550772401FADEDFE0019B64B /* TaskViewCell.h */,
+				550772411FADEDFE0019B64B /* TaskViewCell.m */,
+				550772421FADEDFE0019B64B /* TaskViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
