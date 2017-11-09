@@ -94,7 +94,6 @@
     }
     _hoursTextField.text = [@(task.hours) stringValue];
     [_priorityPickerView selectRow:task.priority inComponent:0 animated:YES];
-   
 }	
 
 - (BOOL)saveTask {
@@ -171,6 +170,12 @@
             return NO;
         }
     }
+    return YES;
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
     return YES;
 }
 

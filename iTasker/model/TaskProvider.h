@@ -15,13 +15,10 @@
 @property NSMutableArray* taskinfosPriorityZero;
 @property NSMutableArray* taskInfosPriorityOne;
 @property NSMutableArray* taskInfosPriorityTwo;
-
-
 @property int selectedPriority;
 
 - (BOOL)isSelectedTasksNeighbours;
 - (void)deselectAllTasks;
-//- (NSMutableArray *)getSelectedTasks;
 - (NSMutableArray *)getTasksForGroupChange;
 - (NSMutableArray*)getTaskInfosWithPriority:(int)priority;
 - (int)getHoursForPriority:(int)priority;

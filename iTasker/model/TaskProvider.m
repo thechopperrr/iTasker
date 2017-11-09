@@ -152,7 +152,7 @@
 
 - (void)updateArrays{
     [self relocateTasksFromArray:_taskinfosPriorityZero withPriority:0];
-    [self relocateTasksFromArray:_taskInfosPriorityOne     withPriority:1];
+    [self relocateTasksFromArray:_taskInfosPriorityOne withPriority:1];
     [self relocateTasksFromArray:_taskInfosPriorityTwo withPriority:2];
 }
 
@@ -165,7 +165,6 @@
             if( ! [self containsObjectWithId:info.task.taskId :arrayToUpdate])
                 [arrayToUpdate addObject:info];
                 [tasksToDelete addObject:info];
-            
         }
     }
     [array removeObjectsInArray:tasksToDelete];

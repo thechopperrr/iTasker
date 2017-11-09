@@ -50,7 +50,7 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
     [self tryShowHideGroupButton];
     [_tableView reloadData];
 }
-//isEditable !!!!
+
 - (void)setUpTexts{
     [_saveButton setTitle:NSLocalizedString(@"btn_add_task", nil) forState:UIControlStateNormal];
     [_groupChangeButton setTitle:NSLocalizedString(@"btn_group_change", nil) forState:UIControlStateNormal];
