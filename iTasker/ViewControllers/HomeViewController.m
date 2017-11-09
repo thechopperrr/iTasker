@@ -47,6 +47,7 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 -(void)viewDidAppear:(BOOL)animated{
     [self clearSelectedTasks];
+    [self tryShowHideGroupButton];
     [_tableView reloadData];
 }
 //isEditable !!!!
@@ -104,7 +105,6 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 -(void)saveTask:(TaskInfo *)taskInfo {
     [_taskProvider saveTask:taskInfo];
-    [_tableView reloadData];
 }
 
 - (void)openUpdateVCWithTask:(TaskInfo *)taskInfo{
@@ -140,8 +140,9 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 - (void)clearSelectedTasks{
     [_taskProvider deselectAllTasks];
-    [_tableView reloadData];
     [_taskProvider updateArrays];
+    [_tableView reloadData];
+    
 }
 
 @end

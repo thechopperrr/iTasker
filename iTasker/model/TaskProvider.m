@@ -65,8 +65,9 @@
 
 - (void)saveTask:(TaskInfo *)taskToUpdate{
     NSMutableArray* taskArray = [self getTaskInfosWithPriority:taskToUpdate.task.priority];
-    if( ! [self containsObjectWithId:taskToUpdate.task.taskId :taskArray])
+    if( ! [self containsObjectWithId:taskToUpdate.task.taskId :taskArray]){
         [taskArray addObject:taskToUpdate];
+    }
 }
 
 - (BOOL)containsObjectWithId:(int)taskId : (NSMutableArray *)tasks{
@@ -151,7 +152,7 @@
 
 - (void)updateArrays{
     [self relocateTasksFromArray:_taskinfosPriorityZero withPriority:0];
-    [self relocateTasksFromArray:_taskInfosPriorityOne	 withPriority:1];
+    [self relocateTasksFromArray:_taskInfosPriorityOne     withPriority:1];
     [self relocateTasksFromArray:_taskInfosPriorityTwo withPriority:2];
 }
 
@@ -161,8 +162,10 @@
     for(TaskInfo *info in array){
         if(info.task.priority != priority){
             NSMutableArray *arrayToUpdate = [self getTaskInfosWithPriority:info.task.priority];
-            [arrayToUpdate addObject:[info copy]];
-            [tasksToDelete addObject:info];
+            if( ! [self containsObjectWithId:info.task.taskId :arrayToUpdate])
+                [arrayToUpdate addObject:info];
+                [tasksToDelete addObject:info];
+            
         }
     }
     [array removeObjectsInArray:tasksToDelete];
