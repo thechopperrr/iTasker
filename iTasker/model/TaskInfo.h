@@ -11,7 +11,7 @@
 
 @interface TaskInfo : NSObject
 
-@property Task *task;
+@property (retain) Task *task;
 @property BOOL isSelected;
 
 @end

@@ -11,7 +11,7 @@
 
 
 @interface UpdateTaskViewController ()
-//@property int priority;
+
 @end
 
 @implementation UpdateTaskViewController
@@ -178,5 +178,12 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)dealloc{
+    _taskInfo = nil;
+    [_taskInfo release];
+    [super dealloc];
+}
+
 
 @end

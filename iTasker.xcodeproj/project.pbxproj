@@ -133,8 +133,8 @@
 			children = (
 				550772321FADAD9C0019B64B /* model */,
 				550772001FADABC40019B64B /* AppDelegate.h */,
-				55734BAF1FB3B334008E67F5 /* ViewControllers */,
 				550772011FADABC40019B64B /* AppDelegate.m */,
+				55734BAF1FB3B334008E67F5 /* ViewControllers */,
 				55734BB01FB3B361008E67F5 /* Views */,
 				550772061FADABC40019B64B /* Main.storyboard */,
 				550772091FADABC40019B64B /* Assets.xcassets */,
@@ -522,7 +522,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RPA568A5Y2;
 				INFOPLIST_FILE = iTasker/Info.plist;
@@ -530,6 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.n.iTasker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -538,7 +541,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RPA568A5Y2;
 				INFOPLIST_FILE = iTasker/Info.plist;
@@ -546,6 +551,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = a.n.iTasker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

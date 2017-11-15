@@ -11,10 +11,10 @@
 
 @interface TaskProvider : NSObject
 
-@property  NSMutableArray *selectedtTasks;
-@property NSMutableArray* taskinfosPriorityZero;
-@property NSMutableArray* taskInfosPriorityOne;
-@property NSMutableArray* taskInfosPriorityTwo;
+@property (retain) NSMutableArray *selectedtTasks;
+@property (retain) NSMutableArray* taskinfosPriorityZero;
+@property (retain) NSMutableArray* taskInfosPriorityOne;
+@property (retain) NSMutableArray* taskInfosPriorityTwo;
 @property int selectedPriority;
 
 - (BOOL)isSelectedTasksNeighbours;

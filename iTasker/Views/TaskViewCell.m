@@ -9,7 +9,6 @@
 #import "TaskViewCell.h"
 
 @interface TaskViewCell ()
-@property (nonatomic) Task *task;
 @property bool isSelected;
 @end
 
@@ -53,6 +52,12 @@
 - (void)deselecttCell{
     _selectButton.backgroundColor = [UIColor whiteColor];
     _taskInfo.isSelected = NO;
+}
+
+-(void)dealloc {
+    _taskInfo = nil;
+    [_taskInfo release];
+    [super dealloc];
 }
 
 @end

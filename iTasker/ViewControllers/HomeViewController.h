@@ -11,8 +11,8 @@
 
 
 @interface HomeViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIButton *groupChangeButton;
+@property (retain, nonatomic) IBOutlet UIButton *saveButton;
+@property (retain, nonatomic) IBOutlet UIButton *groupChangeButton;
 
 
 @end

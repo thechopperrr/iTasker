@@ -100,5 +100,11 @@
     return YES;
 }
 
+- (void)dealloc{
+    _selectedTasks = nil;
+    [_selectedTasks release];
+    [super dealloc];
+}
+
 
 @end

@@ -17,20 +17,20 @@
 
 @interface UpdateTaskViewController : UIViewController <UIPickerViewDelegate, BarCodeReaderDelegate>
 
-@property TaskInfo* taskInfo;
-@property (weak, nonatomic) IBOutlet UILabel *taskDescLabel;
-@property (weak, nonatomic) IBOutlet UITextView *taskDeskTextView;
-@property (weak, nonatomic) IBOutlet UILabel *taskNotesLabel;
-@property (weak, nonatomic) IBOutlet UITextView *taskNotesTextView;
-@property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
-@property (weak, nonatomic) IBOutlet UITextField *hoursTextField;
-@property (weak, nonatomic) IBOutlet UILabel *editableLabel;
-@property (weak, nonatomic) IBOutlet UISwitch *editableSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
-@property (weak, nonatomic) IBOutlet UIPickerView *priorityPickerView;
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancellButton;
-@property (weak, nonatomic) IBOutlet UIButton *qrCodeButton;
+@property (retain) TaskInfo* taskInfo;
+@property (retain, nonatomic) IBOutlet UILabel *taskDescLabel;
+@property (retain, nonatomic) IBOutlet UITextView *taskDeskTextView;
+@property (retain, nonatomic) IBOutlet UILabel *taskNotesLabel;
+@property (retain, nonatomic) IBOutlet UITextView *taskNotesTextView;
+@property (retain, nonatomic) IBOutlet UILabel *hoursLabel;
+@property (retain, nonatomic) IBOutlet UITextField *hoursTextField;
+@property (retain, nonatomic) IBOutlet UILabel *editableLabel;
+@property (retain, nonatomic) IBOutlet UISwitch *editableSwitch;
+@property (retain, nonatomic) IBOutlet UILabel *priorityLabel;
+@property (retain, nonatomic) IBOutlet UIPickerView *priorityPickerView;
+@property (retain, nonatomic) IBOutlet UIButton *saveButton;
+@property (retain, nonatomic) IBOutlet UIButton *cancellButton;
+@property (retain, nonatomic) IBOutlet UIButton *qrCodeButton;
 
 @property (weak) id <UpdateTaskViewControllerDelegate> delegate;
 

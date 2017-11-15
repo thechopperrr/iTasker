@@ -13,7 +13,7 @@
 
 +(NSMutableArray *)loadTasksFromFile: (NSString *) filename {
     
-    NSMutableArray* taskArray = [[NSMutableArray alloc]init];
+    NSMutableArray* taskArray = [[[NSMutableArray alloc]init] autorelease];
     NSArray* tasks = [self JSONFileToArray:filename];
     for(NSDictionary *taskDictionary in tasks){
         Task *task = [[Task alloc] init];
@@ -24,6 +24,7 @@
         [task setPriority:[[taskDictionary objectForKey:@"Priority"]intValue]];
         [task setHours:[[taskDictionary objectForKey:@"Hours"] doubleValue]];
         [taskArray addObject:task];
+        [task release];
     }
     return [taskArray copy];
 }
