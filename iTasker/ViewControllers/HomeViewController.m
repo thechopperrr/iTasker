@@ -17,8 +17,8 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
 
 @interface HomeViewController () <UITableViewDelegate, UpdateTaskViewControllerDelegate, TaskViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property TaskProvider *taskProvider;
+@property (retain, nonatomic)IBOutlet UITableView *tableView;
+@property  (retain) TaskProvider *taskProvider;
 @property NSMutableArray* selectedIndexPaths;
 
 @end
@@ -40,7 +40,6 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"title_app", nil);
     _taskProvider = [[TaskProvider alloc]init];
-    _selectedIndexPaths = [[NSMutableArray alloc]init];
     [self setUpTexts];
     _groupChangeButton.hidden = YES;
 }
@@ -142,7 +141,12 @@ static NSString *taskViewCellIdentifier = @"TaskViewCell";
     [_taskProvider deselectAllTasks];
     [_taskProvider updateArrays];
     [_tableView reloadData];
-    
+}
+
+- (void)dealloc{
+    _taskProvider = nil;
+    [_taskProvider release];
+    [super dealloc];
 }
 
 @end

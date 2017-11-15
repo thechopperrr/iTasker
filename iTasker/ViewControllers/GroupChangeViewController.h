@@ -13,14 +13,14 @@
 
 @interface GroupChangeViewController : UIViewController <UIPickerViewDelegate, BarCodeReaderDelegate>
 
-@property NSMutableArray* selectedTasks;
-@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
-@property (weak, nonatomic) IBOutlet UITextView *notesTextView;
-@property (weak, nonatomic) IBOutlet UIButton *qrScanButton;
-@property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancellButton;
+@property (assign) NSMutableArray* selectedTasks;
+@property (retain, nonatomic) IBOutlet UILabel *notesLabel;
+@property (retain, nonatomic) IBOutlet UITextView *notesTextView;
+@property (retain, nonatomic) IBOutlet UIButton *qrScanButton;
+@property (retain, nonatomic) IBOutlet UILabel *priorityLabel;
+@property (retain, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (retain, nonatomic) IBOutlet UIButton *saveButton;
+@property (retain, nonatomic) IBOutlet UIButton *cancellButton;
 @property (weak) id <UpdateTaskViewControllerDelegate> delegate;
 
 @end

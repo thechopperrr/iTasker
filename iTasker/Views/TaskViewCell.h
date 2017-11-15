@@ -18,11 +18,11 @@
 @end
 
 @interface TaskViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *deskriptionLabel;
-@property (weak, nonatomic) IBOutlet UIButton *selectButton;
+@property (retain, nonatomic) IBOutlet UILabel *timeLabel;
+@property (retain, nonatomic) IBOutlet UILabel *deskriptionLabel;
+@property (retain, nonatomic) IBOutlet UIButton *selectButton;
 
-@property TaskInfo *taskInfo;
+@property (retain) TaskInfo *taskInfo;
 @property (weak) id <TaskViewCellDelegate> delegate;
 
 - (void)setUpTaskInfoAndUpdate:(TaskInfo *)info;

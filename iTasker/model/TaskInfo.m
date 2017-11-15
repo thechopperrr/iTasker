@@ -17,4 +17,10 @@
     return copy;
 }
 
+-(void)dealloc {
+    _task = nil;
+    [_task release];
+    [super dealloc];
+}
+
 @end

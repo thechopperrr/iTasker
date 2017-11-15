@@ -11,7 +11,7 @@
 @implementation Task
 
 -(id) copyWithZone: (NSZone *) zone {
-    Task *copy = [[Task allocWithZone: zone] init];
+    Task *copy = [[Task allocWithZone: zone] init] ;
     copy.taskId = self.taskId;
     copy.taskDescription = self.taskDescription;
     copy.notes = self.notes;
@@ -19,6 +19,14 @@
     copy.priority = self.priority;
     copy.hours = self.hours;
     return copy;
+}
+
+-(void)dealloc {
+     _taskDescription = nil;
+    [_taskDescription release];
+     _notes = nil;
+    [_notes release];
+    [super dealloc];
 }
 
 @end

@@ -94,16 +94,23 @@
         
         if (detectionString != nil)
         {
-//            _label.text = detectionString;
             [_delegate textDetected:detectionString];
             [self.navigationController popViewControllerAnimated:YES];
             break;
         }
-//        else
-//            _label.text = @"(none)";
+
         }
     
     _highlightView.frame = highlightViewRect;
+}
+
+-(void)dealloc {
+    [_highlightView release];
+    [_session release];
+    [_device release];
+    [_output release];
+    [_delegate autorelease];
+    [super dealloc];
 }
 
 @end

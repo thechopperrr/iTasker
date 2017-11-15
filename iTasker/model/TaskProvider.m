@@ -29,7 +29,7 @@
 - (void)setTaskInfos {
     
     for(Task* task in [TaskLoader loadTasksFromFile:@"to_do_list"]){
-        TaskInfo *info =[[TaskInfo alloc]init];
+        TaskInfo *info =[[[TaskInfo alloc]init] autorelease];
         info.task = task;
         NSMutableArray* arr = [self getTaskInfosWithPriority:task.priority];
         [arr addObject:info];
@@ -168,6 +168,19 @@
         }
     }
     [array removeObjectsInArray:tasksToDelete];
+    [tasksToDelete release];
+}
+
+-(void)dealloc {
+     _selectedtTasks = nil;
+    [_selectedtTasks release];
+   _taskinfosPriorityZero = nil;
+    [_taskinfosPriorityZero release];
+    _taskInfosPriorityOne = nil;
+    [_taskInfosPriorityOne release];
+    _taskInfosPriorityTwo = nil;
+    [_taskInfosPriorityTwo release];
+    [super dealloc];
 }
 
 @end

@@ -11,8 +11,8 @@
 @interface Task : NSObject
 
 @property int taskId;
-@property NSString *taskDescription;
-@property NSString *notes;
+@property (retain) NSString *taskDescription;
+@property (retain) NSString *notes;
 @property BOOL isEditable;
 @property int priority;
 @property double hours;
